@@ -1,0 +1,85 @@
+  <ngb-alert *ngIf="!closed" (close)="closed=true">{{title}}</ngb-alert>
+  <div>
+    <button class="btn btn-outline-primary" (click)="getServiceData()">Load profile</button>
+  </div>  
+<div class="row">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+      <div class="dropdown-menu" aria-labelledby="dropdownBasic1">
+        <button class="dropdown-item">Action - 1</button>
+        <button class="dropdown-item">Another Action</button>
+        <button class="dropdown-item">Something else is here</button>
+      </div>
+    </div>
+  </div>
+</div>  
+  <div ngbDropdown class="d-inline-block">
+    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+    <div class="dropdown-menu" aria-labelledby="dropdownBasic1">
+      <button class="dropdown-item" *ngFor="let city of cities">{{city.city}}</button>
+    </div>
+   </div>
+  <div ngbDropdown class="d-inline-block">
+    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+    <div class="dropdown-menu" aria-labelledby="dropdownBasic1">
+      <button class="dropdown-item" *ngFor="let city of citiesObservable | async">{{city}}</button>
+    </div>
+   </div>   
+<button type="button" class="btn btn-secondary" ngbTooltip="You see, I show up on click!" triggers="click:blur">
+  Click me!
+</button>
+<wj-flex-grid #flex [itemsSource]="data">
+  <wj-flex-grid-column 
+    [header]="'The City'" 
+    [binding]="'city'"
+    [align]="'center'"
+    [dataMap]="cityMap" >
+  </wj-flex-grid-column>
+</wj-flex-grid>
+<p-dataGrid [value]="data">
+      <ng-template let-car pTemplate="item">
+        <div class="ui-g-12 ui-md-3">
+            {{car.city}}
+        </div>
+    </ng-template>
+</p-dataGrid>
+
+<form [formGroup]="heroForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="form-group">
+    <label class="center-block">Name:
+      <input class="form-control" formControlName="name" >
+    </label>
+  </div>
+  <div style="margin-bottom: 1em">
+    <button type="submit"
+            [disabled]="heroForm.pristine" class="btn btn-success">Save</button> &nbsp;
+    <button type="reset" (click)="revert()"
+            [disabled]="heroForm.pristine" class="btn btn-danger">Revert</button>
+  </div>  
+</form>
+<p>Form value: {{ heroForm.value | json }}</p>
+<p>Form status: {{ heroForm.status | json }}</p>
+<p>Name value: {{ heroForm.get('name').value }}</p>
+    <modal #saveModal>
+        <modal-header>
+            <h1>Save</h1>
+        </modal-header>
+        <modal-content>
+            Save
+        </modal-content>
+        <modal-footer>
+            <button class="btn btn-primary" (click)="saveModal.close()">close</button>
+        </modal-footer>
+    </modal>
+    <modal #revertModal>
+        <modal-header>
+            <h1>Revert</h1>
+        </modal-header>
+        <modal-content>
+            Revert
+        </modal-content>
+        <modal-footer>
+            <button class="btn btn-primary" (click)="revertModal.close()">close</button>
+        </modal-footer>
+    </modal>    
