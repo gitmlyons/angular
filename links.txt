@@ -1,4 +1,5 @@
-https://www.sitepoint.com/angular-2-tutorial/
+Angular
+https://www.sitepoint.com/ultimate-angular-cli-reference/
 https://dzone.com/articles/completing-the-angular-2-quick-start-in-vs-code-1
 https://code.visualstudio.com/docs/languages/typescript
 http://diveshblog.weebly.com/blog/angular-2-adding-bootstrap-to-application
@@ -17,6 +18,22 @@ https://angular.io/guide/user-input
 https://www.npmjs.com/package/ngx-modal
 https://medium.com/front-end-hacking/angular-2-a-quick-intro-about-template-syntax-121f9b160a64
 https://angular.io/guide/ajs-quick-reference
+
+1. node js must be downloaded and installed first
+2. npm install -g typescript
+3. npm install -g @angular/cli
+4. ng new my-app
+5. ng serve
+6. install VSCode and simply open that directory
+7. Debug using console/sources in Google Chrome under the webpack folder
+8. npm install other things like bootstrap and font awesome, favourite controls 
+9. Adding featurs - either just add in creating code files directly or use cli see - https://www.sitepoint.com/ultimate-angular-cli-reference/
+10. Rebuilds are automatic under dev changes / webpack while ng serve is running
+11. Testing - to do but a bit messy with Karma having own version of compiling IMHO
+12. Prod build is a matter of setting that mode and packing for release
+13. Code example in my-app in this repository
+
+GIT
 https://stackoverflow.com/questions/7311995/what-is-git-push-origin-master-help-with-gits-refs-heads-and-remotes
 https://stackoverflow.com/questions/7704480/why-does-git-commit-not-save-my-changes
 git clone [remote uri]
@@ -26,3 +43,4 @@ git pull
 git commit . -m ""
 git push origin master
 or a pull request if branch closed
+
