@@ -18,4 +18,4 @@ https://www.npmjs.com/package/ngx-modal
 https://medium.com/front-end-hacking/angular-2-a-quick-intro-about-template-syntax-121f9b160a64
 https://angular.io/guide/ajs-quick-reference
 https://stackoverflow.com/questions/7311995/what-is-git-push-origin-master-help-with-gits-refs-heads-and-remotes
-
+https://stackoverflow.com/questions/7704480/why-does-git-commit-not-save-my-changes
